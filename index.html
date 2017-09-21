@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Plateanet</title>
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg bg-ok justify-content-between">
+		  	<a class="nav-link" href="#"><img src="assets/logo.jpg" alt=""></a>
+
+		  	<form class="form-inline">
+				    <div class="input-group altobuscador">
+				      
+				      <input type="text" class="form-control fondoinput bordeizquierdo" placeholder="Buscar obra" aria-label="Username" aria-describedby="basic-addon1">
+				      <span style="color: #ffc20d;" class="input-group-addon ion-search bordederecho" id="basic-addon1"></span>
+				    </div>
+			</form>
+
+			
+			<div class="dropdown">
+				<span class="ion-navicon-round menu btn btn-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+			  <!--<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    
+			  </button>-->
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			    <a class="dropdown-item" href="#">Logueate</a>
+			    <a class="dropdown-item" href="#">Registrate</a>
+			    <div class="separamenu"><div class="separadormenu"></div></div>
+			   	 <a class="dropdown-item" href="#">Cómo comprar</a>
+			     <a class="dropdown-item" href="#">Preguntas frecuentes</a>
+			    <div class="separamenu"><div class="separadormenu"></div></div>
+			     <a class="dropdown-item" href="#">Promociones</a>
+			   
+
+			  </div>
+			</div>
+
+		</nav>
+	</header>
+	<section>
+		
+  			
+  				<div class="row no-gutters">
+    				<div class="col-lg-8" style="line-height: 0;">
+      						<img id="imgobra" style="width:100%" src="assets/toc-toc.jpg">
+   					</div>
+    				<div id="compracolumn" class="col-lg-4 gris">
+
+    					<div class="remodal2" style="position: fixed; z-index: 9999; top: -5000px; right: -5000px; bottom: -5000px; left: -5000px; background: rgba(0, 0, 0, 0.6); visibility: hidden;">
+						</div>
+
+						<div class="remodal3" style="position: fixed; z-index: 9999; top: -5000px; right: -5000px; bottom: -5000px; left: -5000px; background: rgba(0, 0, 0, 0.6); visibility: hidden;">
+						</div>
+					
+						<div class="selectores" style="width:90%">
+						    <div id="entradas" class="input-group">
+						      <span class="input-group-addon">
+						        1
+						      </span>
+						      <input type="text" class="form-control" placeholder="Cantidad de entradas" readonly>
+						      <span class="input-group-addon ion-chevron-down"></span>
+						    </div>
+
+						    <div id="desplegableentradas"><ul><li class="sector" style="font-weight:bold;font-size: 13px;width: 80%;text-align: left; background:white;cursor:default;">CANTIDAD DE ENTRADAS:</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li></ul></div>
+
+						    <div id="funciones" class="input-group">
+						      <span class="input-group-addon">
+						        2
+						      </span>
+						      <input type="text" class="form-control" placeholder="Función (fecha y hora)" readonly>
+						      <span class="input-group-addon ion-chevron-down"></span>
+						    </div>
+
+						    <div id="desplegablefunciones">
+						    	<img src="assets/funcion.jpg" alt="">
+						    </div>
+
+						    <div id="sectores" class="input-group">
+						      <span class="input-group-addon">
+						        3
+						      </span>
+						      <input type="text" class="form-control" placeholder="Sector de la sala" readonly>
+						      <span class="input-group-addon ion-chevron-down"></span>
+						    </div>
+
+						    <div id="desplegablesectores">
+						    	<img src="assets/sector.jpg" alt="">
+						    </div>
+
+						    <div class="input-group">
+						      <span class="input-group-addon">
+						        4
+						      </span>
+						      <input type="text" class="form-control" placeholder="Precio y promos" readonly>
+						      <span class="input-group-addon ion-chevron-down"></span>
+						    </div>
+
+
+						</div>
+
+
+
+
+
+
+
+      					<div id="comprar" class="comprar bordeizquierdo bordederecho">COMPRAR</div>
+    				</div>
+    			</div>
+		
+	</section>
+	<section>
+		
+  			<div class="container-fluid">
+  				<div class="row">
+    				<div class="col-lg-8">
+      						<h1 class="titulo">TOC TOC</h1>
+      						<h3 class="subtitulo azultitulo">TEATRO MULTITEATRO, CABA, Bs As</h3>
+      						<div class="columnainfo">
+      							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus unde qui, ut eaque sequi accusamus explicabo quas, iure architecto itaque veniam! Cumque aperiam molestiae quidem ipsa quo necessitatibus consequuntur eveniet.
+      						</div>
+      						<div class="infoimportante">
+      							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae necessitatibus sapiente doloribus ullam delectus tempore esse, nostrum quasi placeat obcaecati totam laborum facere consequatur dolorum in nam ut quidem aliquid.
+      						</div>
+   					</div>
+    				<div class="col-lg-4 colderechainfo">
+      					<h3 class="subtitulocolderecha">TARJETAS PARA ESTA OBRA</h3>
+      					<div class="separador"></div>
+      					<ul class="contenedortarjetas">
+      						<li><img src="assets/tarjeta_Visa.jpg" alt=""></li>
+      						<li><img src="assets/tarjeta_Master.jpg" alt=""></li>
+      					</ul>
+						<!--promos-->
+      					<h3 class="subtitulocolderecha">PROMOCIONES VIGENTES</h3>
+      					<div class="separador"></div>
+      					<ul class="contenedorpromos">
+      						<li><img src="assets/50P.jpg" alt=""></li>
+      						<li><img src="assets/LA-NACION-2x1.jpg" alt=""></li>
+      					</ul>
+    				</div>
+    			</div>
+    		</div>
+		
+	</section>
+	<footer>
+		<div class="bandacolores"><img src="assets/banda-colores.jpg" alt=""></div>
+		<div class="logo-redes">
+			<img class="logofooter" src="assets/logofooter.png" alt="">
+			
+			<div class="redes-sociales">
+	            <a class="net-icon facebook-icon" href="https://www.facebook.com/PLATEANET" target="_blank"></a>
+	            <a class="net-icon twitter-icon" href="https://www.twitter.com/PLATEANET" target="_blank"></a>
+	            <a class="net-icon youtube-icon" href="https://www.youtube.com/channel/UCRnuLIagDkGtDcZf860IHtA" target="_blank"></a>
+	            <a class="net-icon instagram-icon" href="https://www.instagram.com/plateanet/" target="_blank"></a>
+        	</div>
+			
+		</div>
+
+		<div class="infofooter">
+			<ul>
+				<li class="subtitulofooter">NOSOTROS</li>
+				<li>Quiénes somos</li>
+				<li>Logotipo</li>
+				<li>Eticket</li>
+				<li>Trabajá con nosotros</li>
+			</ul>
+
+			<ul>
+				<li class="subtitulofooter">COMPRA</li>
+				<li>Obras</li>
+				<li>Teatros</li>
+				<li>Promociones</li>
+			</ul>
+
+			<ul>
+				<li class="subtitulofooter">VENTA</li>
+				<li>Venta corporativa</li>
+				<li>Contratación de servicios</li>
+				<li>Intranet</li>
+				<li>Términos y condiciones</li>
+			</ul>
+
+			<ul>
+				<li class="subtitulofooter">AYUDA</li>
+				<li>Cómo comprar</li>
+				<li>Preguntas frecuentes</li>
+				<li>Mapa de sitio</li>
+				<li>Contacto</li>
+
+			</ul>
+
+			<ul>
+				<li>
+					<li><img src="assets/comodo.png" alt=""></li>
+					<p class="copyright-text">
+		             © 2007-<script>document.write(new Date().getFullYear())</script>. <br> Todos los derechos reservados. <br>Plateanet (web1)<br>
+		            <a class="isotipokw" href="http://www.keywork.com.ar/" target="_blank">Powered by Keywork
+		            <img src="assets/isotipokw.png"></a>
+		        			</p>
+				</li>
+
+			</ul>
+
+			<ul>
+				<li>
+					<a href="http://qr.afip.gob.ar/?qr=kwtNgkcpGIa54lJJxVAn0A,," target="_F960AFIPInfo" class="clave-fiscal"><img class="datafiscal" src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0"></a>
+				</li>
+			</ul>
+		</div>
+
+	</footer>
+</body>
+<script>
+
+	//menu overlay gris
+	$('#dropdownMenuButton').click(function(){
+
+		$('.dropdown-menu').toggle();
+		if($('.remodal3').css('visibility')=='visible'){
+			$('.remodal3').css('visibility','hidden');
+		}else $('.remodal3').css('visibility','visible');
+	})
+
+	$('.dropdown-menu').on('click',function(){
+		$('.dropdown-menu').toggle();
+		$('.remodal3').css('visibility','hidden');
+
+	})
+
+	$('.remodal3').on('click',function(){
+		$('.remodal3').css('visibility','hidden');
+		$('.dropdown-menu').toggle();
+
+	})
+
+
+
+	//$('#compracolumn').height($('#imgobra').height());
+	$('#entradas').click(function(){
+		$('#desplegableentradas').toggle();
+		$('.remodal2').css('visibility','visible');
+	})
+
+		$('#desplegableentradas ul li').click(function(){
+		$('#desplegableentradas').toggle();
+		//$('.remodal2').css('visibility','hidden');
+		$('#entradas input').val("Cantidad de entradas: " + $(this).text());
+		$('#desplegablefunciones').toggle();
+		console.log($(this).text());
+	})
+
+	$('#funciones').click(function(){
+		$('#desplegablefunciones').toggle();
+		$('.remodal2').css('visibility','visible');
+	})
+
+	$('#desplegablefunciones').click(function(){
+		$('#desplegablefunciones').toggle();
+		//$('.remodal2').css('visibility','hidden');
+		$('#funciones input').val("jueves 21/09/2017 - 21:00");
+		$('#desplegablesectores').toggle();
+		
+		console.log($(this).text());
+	})
+
+	$('#sectores').click(function(){
+		$('#desplegablesectores').toggle();
+		$('.remodal2').css('visibility','visible');
+	})
+
+	$('#desplegablesectores').click(function(){
+		$('#desplegablesectores').toggle();
+		$('.remodal2').css('visibility','hidden');
+		$('#sectores input').val("Platea - $800");
+		
+		//console.log($(this).text());
+	})
+
+
+
+	$('#comprar').click(function(){
+		if($('#entradas input').val() == ""){
+
+		$('#desplegableentradas').toggle();
+		$('.remodal2').css('visibility','visible');
+		}
+		
+	})
+
+
+
+
+</script>
+</html>
