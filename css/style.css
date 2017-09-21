@@ -97,7 +97,8 @@ a:hover {
 }
 
 .dropdown {
-
+    
+    cursor:pointer;
 	z-index: 99999
 }
 
