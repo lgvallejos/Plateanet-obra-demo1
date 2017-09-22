@@ -277,7 +277,7 @@ a:hover {
     
 }
 
-#desplegablesectores {
+/*#desplegablesectores {
     display: none;
     position: absolute;
     background: white;
@@ -289,6 +289,20 @@ a:hover {
     left: -162%;
     top:5px;
     
+}*/
+
+.desplegablesectores {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #989a99;
+    border-radius: 5px;
+    z-index: 10000;
+    padding: 10px 0;
+    line-height: 30px;
+    width: 90%;
+    /* left: -162%; */
+    /* top: 5px; */
 }
 
 .input-group .form-control {

@@ -91,8 +91,11 @@
 						      <span class="input-group-addon ion-chevron-down"></span>
 						    </div>
 
-						    <div id="desplegablesectores">
-						    	<img src="assets/sector.jpg" alt="">
+						    <div class="desplegablesectores">
+						    	<img src="assets/sectorlist.jpg" alt="">
+						    </div>
+						    <div class="desplegablesectores" style="    top: 5px;left: -619px;width: 635px;">
+						    	<img src="assets/mapasector.jpg" alt="">
 						    </div>
 
 						    <div class="input-group">
@@ -227,7 +230,7 @@
 		if($('.remodal3').css('visibility')=='visible'){
 			$('.remodal3').css('visibility','hidden');
 		}else $('.remodal3').css('visibility','visible');
-		$('#desplegablesectores').hide();
+		$('.desplegablesectores').hide();
 		$('#desplegableentradas').hide();
 		$('#desplegablefunciones').hide();
 		$('.remodal2').css('visibility','hidden');
@@ -250,7 +253,7 @@
 	//$('#compracolumn').height($('#imgobra').height());
 	$('#entradas').click(function(){
 		$('#desplegableentradas').toggle();
-		$('#desplegablesectores').hide();
+		$('.desplegablesectores').hide();
 		if($('#desplegablefunciones').css('display')!=='block'){
 
 			if($('.remodal2').css('visibility')=='visible'){
@@ -277,7 +280,7 @@
 		}else{
 			$('#desplegablefunciones').toggle();
 			$('#desplegableentradas').hide();
-			$('#desplegablesectores').hide();
+			$('.desplegablesectores').hide();
 			if($('.remodal2').css('visibility')=='visible'){
 				$('.remodal2').css('visibility','hidden');
 			}else $('.remodal2').css('visibility','visible');
@@ -289,7 +292,7 @@
 		$('#desplegablefunciones').toggle();
 		//$('.remodal2').css('visibility','hidden');
 		$('#funciones input').val("jueves 21/09/2017 - 21:00");
-		$('#desplegablesectores').toggle();
+		$('.desplegablesectores').toggle();
 		
 		console.log($(this).text());
 	})
@@ -306,7 +309,7 @@
 		}
 
 
-		$('#desplegablesectores').toggle();
+		$('.desplegablesectores').toggle();
 		$('#desplegableentradas').hide();
 		$('#desplegablefunciones').hide();
 		if($('.remodal2').css('visibility')=='visible'){
@@ -316,8 +319,8 @@
 
 
 
-	$('#desplegablesectores').click(function(){
-		$('#desplegablesectores').toggle();
+	$('.desplegablesectores').click(function(){
+		$('.desplegablesectores').toggle();
 		$('.remodal2').css('visibility','hidden');
 		$('#sectores input').val("Platea - $800");
 		
