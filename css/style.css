@@ -50,7 +50,8 @@ a:hover {
 
 .fondoinput {
 
-	background: #e9ecef;
+	/*background: #e9ecef;*/
+    background:white;
     
 }
 
@@ -230,6 +231,11 @@ a:hover {
 
 }
 
+.selectores {
+
+    z-index: 10000;
+}
+
 #desplegableentradas {
     display: none;
     position: absolute;
@@ -237,7 +243,7 @@ a:hover {
     background: white;
     border: 1px solid #989a99;
     border-radius: 5px;
-    z-index: 9999;
+    z-index: 10000;
     padding: 10px 0;
     line-height: 30px;
     
@@ -265,7 +271,7 @@ a:hover {
     background: white;
     border: 1px solid #989a99;
     border-radius: 5px;
-    z-index: 9999;
+    z-index: 10000;
     padding: 10px 0;
     line-height: 30px;
     
@@ -277,7 +283,7 @@ a:hover {
     background: white;
     border: 1px solid #989a99;
     border-radius: 5px;
-    z-index: 9999;
+    z-index: 10000;
     padding: 10px 0;
     line-height: 30px;
     left: -162%;
@@ -285,6 +291,10 @@ a:hover {
     
 }
 
+.input-group .form-control {
+    
+    z-index: 9999;
+}
 
 
 /*Footer*/

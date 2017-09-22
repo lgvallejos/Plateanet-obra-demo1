@@ -57,7 +57,7 @@
     					<div class="remodal2" style="position: fixed; z-index: 9999; top: -5000px; right: -5000px; bottom: -5000px; left: -5000px; background: rgba(0, 0, 0, 0.6); visibility: hidden;">
 						</div>
 
-						<div class="remodal3" style="position: fixed; z-index: 9999; top: -5000px; right: -5000px; bottom: -5000px; left: -5000px; background: rgba(0, 0, 0, 0.6); visibility: hidden;">
+						<div class="remodal3" style="position: fixed; z-index: 10001; top: -5000px; right: -5000px; bottom: -5000px; left: -5000px; background: rgba(0, 0, 0, 0.6); visibility: hidden;">
 						</div>
 					
 						<div class="selectores" style="width:90%">
@@ -227,6 +227,10 @@
 		if($('.remodal3').css('visibility')=='visible'){
 			$('.remodal3').css('visibility','hidden');
 		}else $('.remodal3').css('visibility','visible');
+		$('#desplegablesectores').hide();
+		$('#desplegableentradas').hide();
+		$('#desplegablefunciones').hide();
+		$('.remodal2').css('visibility','hidden');
 	})
 
 	$('.dropdown-menu').on('click',function(){
@@ -241,13 +245,23 @@
 
 	})
 
-
+	//selector entradas
 
 	//$('#compracolumn').height($('#imgobra').height());
 	$('#entradas').click(function(){
 		$('#desplegableentradas').toggle();
-		$('.remodal2').css('visibility','visible');
+		$('#desplegablesectores').hide();
+		if($('#desplegablefunciones').css('display')!=='block'){
+
+			if($('.remodal2').css('visibility')=='visible'){
+			$('.remodal2').css('visibility','hidden');
+		}else $('.remodal2').css('visibility','visible');
+		}
+		$('#desplegablefunciones').hide();
+		
 	})
+
+
 
 		$('#desplegableentradas ul li').click(function(){
 		$('#desplegableentradas').toggle();
@@ -258,8 +272,17 @@
 	})
 
 	$('#funciones').click(function(){
-		$('#desplegablefunciones').toggle();
-		$('.remodal2').css('visibility','visible');
+		if($('#entradas input').val()==""){
+			$('#entradas').click();
+		}else{
+			$('#desplegablefunciones').toggle();
+			$('#desplegableentradas').hide();
+			$('#desplegablesectores').hide();
+			if($('.remodal2').css('visibility')=='visible'){
+				$('.remodal2').css('visibility','hidden');
+			}else $('.remodal2').css('visibility','visible');
+		}
+		
 	})
 
 	$('#desplegablefunciones').click(function(){
@@ -272,9 +295,26 @@
 	})
 
 	$('#sectores').click(function(){
+		if($('#entradas input').val()==""){
+			$('#entradas').click();
+			return;
+		}
+
+		if($('#funciones input').val()==""){
+			$('#funciones').click();
+			return;
+		}
+
+
 		$('#desplegablesectores').toggle();
-		$('.remodal2').css('visibility','visible');
+		$('#desplegableentradas').hide();
+		$('#desplegablefunciones').hide();
+		if($('.remodal2').css('visibility')=='visible'){
+			$('.remodal2').css('visibility','hidden');
+		}else $('.remodal2').css('visibility','visible');
 	})
+
+
 
 	$('#desplegablesectores').click(function(){
 		$('#desplegablesectores').toggle();
@@ -290,11 +330,24 @@
 		if($('#entradas input').val() == ""){
 
 		$('#desplegableentradas').toggle();
-		$('.remodal2').css('visibility','visible');
+		if($('.remodal2').css('visibility')=='visible'){
+			$('.remodal2').css('visibility','hidden');
+		}else $('.remodal2').css('visibility','visible');
 		}
+
+
+		if($('#entradas input').val() !== "" && $('#funciones input').val() == ""){
+
+		$('#desplegablefunciones').toggle();
+		if($('.remodal2').css('visibility')=='visible'){
+			$('.remodal2').css('visibility','hidden');
+		}else $('.remodal2').css('visibility','visible');
+		}
+
+
 		
 	})
-	
+
 
 
 
