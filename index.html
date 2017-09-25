@@ -94,7 +94,7 @@
 						    <div class="desplegablesectores">
 						    	<img src="assets/sectorlist.jpg" alt="">
 						    </div>
-						    <div class="desplegablesectores" style="    top: 5px;left: -619px;width: 635px;">
+						    <div id="mapasector" class="desplegablesectores" style="    top: 8px;left: -619px;width: 635px;">
 						    	<img src="assets/mapasector.jpg" alt="">
 						    </div>
 
@@ -120,7 +120,7 @@
     			</div>
 		
 	</section>
-	<section>
+	<section id="contentobra">
 		
   			<div class="container-fluid">
   				<div class="row">
@@ -252,14 +252,34 @@
 
 	//$('#compracolumn').height($('#imgobra').height());
 	$('#entradas').click(function(){
+		var veremodal=false;
+		if($('.remodal2').css('visibility')=='visible'){
+			$('.remodal2').css('visibility','hidden');
+		}else veremodal=true;
+		if(veremodal) $('.remodal2').css('visibility','visible');
 		$('#desplegableentradas').toggle();
-		$('.desplegablesectores').hide();
-		if($('#desplegablefunciones').css('display')!=='block'){
+		
+		if($('#desplegablefunciones').css('display')=='block'){
+
+			$('.remodal2').css('visibility','visible');
+		}
+
+		if($('.desplegablesectores').css('display')=='block'){
+
+			$('.remodal2').css('visibility','visible');
+		}
+		
+
+		/*if($('.desplegablesectores').css('display')!=='block'){
 
 			if($('.remodal2').css('visibility')=='visible'){
 			$('.remodal2').css('visibility','hidden');
-		}else $('.remodal2').css('visibility','visible');
-		}
+		}else veremodal=true;
+		}*/
+
+		
+
+		$('.desplegablesectores').hide();
 		$('#desplegablefunciones').hide();
 		
 	})
@@ -275,29 +295,64 @@
 	})
 
 	$('#funciones').click(function(){
+		veremodal=false;
+		if($('.remodal2').css('visibility')=='visible'){
+			$('.remodal2').css('visibility','hidden');
+		}else veremodal=true;
+		if(veremodal) $('.remodal2').css('visibility','visible');
+
+		if($('.desplegablesectores').css('display')=='block'){
+
+			$('.remodal2').css('visibility','visible');
+		}
+		
+		$('#desplegableentradas').toggle();
+
 		if($('#entradas input').val()==""){
 			$('#entradas').click();
 		}else{
 			$('#desplegablefunciones').toggle();
 			$('#desplegableentradas').hide();
 			$('.desplegablesectores').hide();
-			if($('.remodal2').css('visibility')=='visible'){
+			/*if($('.remodal2').css('visibility')=='visible'){
 				$('.remodal2').css('visibility','hidden');
-			}else $('.remodal2').css('visibility','visible');
+			}else $('.remodal2').css('visibility','visible');*/
 		}
 		
 	})
 
+	function alturacontentobra(){
+
+		if($('.desplegablesectores').css('display')=='block'){
+			
+
+			$('#contentobra').height($('#mapasector').height()-200);
+		}else $('#contentobra').css('height','auto');
+
+	}
+
 	$('#desplegablefunciones').click(function(){
 		$('#desplegablefunciones').toggle();
+
+			
+		
 		//$('.remodal2').css('visibility','hidden');
 		$('#funciones input').val("jueves 21/09/2017 - 21:00");
 		$('.desplegablesectores').toggle();
+		alturacontentobra();
 		
 		console.log($(this).text());
 	})
 
 	$('#sectores').click(function(){
+		veremodal=false;
+		if($('.remodal2').css('visibility')=='visible'){
+			$('.remodal2').css('visibility','hidden');
+		}else veremodal=true;
+		if(veremodal) $('.remodal2').css('visibility','visible');
+		$('#desplegableentradas').toggle();
+
+
 		if($('#entradas input').val()==""){
 			$('#entradas').click();
 			return;
@@ -310,11 +365,17 @@
 
 
 		$('.desplegablesectores').toggle();
+		alturacontentobra();
+
+		
+		
+		
+
 		$('#desplegableentradas').hide();
 		$('#desplegablefunciones').hide();
-		if($('.remodal2').css('visibility')=='visible'){
+		/*if($('.remodal2').css('visibility')=='visible'){
 			$('.remodal2').css('visibility','hidden');
-		}else $('.remodal2').css('visibility','visible');
+		}else $('.remodal2').css('visibility','visible');*/
 	})
 
 
@@ -323,7 +384,7 @@
 		$('.desplegablesectores').toggle();
 		$('.remodal2').css('visibility','hidden');
 		$('#sectores input').val("Platea - $800");
-		
+		alturacontentobra();
 		//console.log($(this).text());
 	})
 
